@@ -21,7 +21,7 @@ const Navbar = () => {
         </Link>
         <div className={styles.iconContainer}>
           <Link to="/Cart">
-            <img src={shopIcon} alt="trash" />
+            <img src={shopIcon} alt="shop" />
             <span>{state.itemsCounter}</span>
           </Link>
         </div>
