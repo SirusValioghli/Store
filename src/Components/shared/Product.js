@@ -40,12 +40,12 @@ const Product = ({ productData }) => {
           )}
           {quantityCount(state, productData.id) === 1 && (
             <button
-              className={styles.smallButton}
+              className={styles.remButton}
               onClick={() =>
                 dispatch({ type: "REMOVE_ITEM", payload: productData })
               }
             >
-              <img src={trash} alt="iconTrash" style={{ width: "20px" }} />
+              remove
             </button>
           )}
           <span className={styles.counter}>

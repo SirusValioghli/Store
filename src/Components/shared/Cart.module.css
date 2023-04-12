@@ -48,7 +48,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   width: 30px;
-  font-size: 1.6rem !important;
+  font-size: 1.6rem;
   font-weight: bold;
   line-height: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 4px 12px -2px,
@@ -58,6 +58,18 @@
 
 .buttonContainer img {
   width: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remButton {
+  width: 80px !important;
+  font-size: 1rem !important;
+  line-height: 30px;
 }
 
 @media (max-width: 470px) {

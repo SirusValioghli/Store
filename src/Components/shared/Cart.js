@@ -6,9 +6,6 @@ import { CartContext } from "../../context/CartContextProvider";
 // Functions
 import { shorten } from "../../helpers/functions";
 
-// Icons
-import trashIcon from "../../assets/icons/trash.svg";
-
 // Style
 import styles from "./Cart.module.css";
 import { Link } from "react-router-dom";
@@ -33,11 +30,12 @@ const Cart = ({ productData }) => {
       <div className={styles.buttonContainer}>
         {quantity === 1 ? (
           <button
+            className={styles.remButton}
             onClick={() =>
               dispatch({ type: "REMOVE_ITEM", payload: productData })
             }
           >
-            <img src={trashIcon} alt="trash" />
+            remove
           </button>
         ) : (
           <button

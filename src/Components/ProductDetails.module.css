@@ -90,7 +90,7 @@
   border: none;
   color: #fff;
   height: 30px;
-  width: 120px;
+  width: 200px;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -106,8 +106,22 @@
   line-height: 30px;
 }
 
+.remButton {
+  width: 80px !important;
+  font-size: 1rem !important;
+  font-weight: bold;
+  line-height: 30px;
+}
+
 .smallButton img {
   width: 20px;
+}
+
+.quantityButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .buttonContainer button:hover {
@@ -117,7 +131,7 @@
 .counter {
   display: inline-block;
   width: 20px;
-  margin-left: 5px;
+  margin-left: 15px;
   font-size: 1.2rem;
   font-weight: 700;
   color: #1a73e8;

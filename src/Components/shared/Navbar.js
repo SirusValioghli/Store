@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 //Context
 import { CartContext } from "../../context/CartContextProvider";
 
-// Icons
-import shopIcon from "../../assets/icons/shop.svg";
-
 // Style
 import styles from "./Navbar.module.css";
 
@@ -21,7 +18,7 @@ const Navbar = () => {
         </Link>
         <div className={styles.iconContainer}>
           <Link to="/Cart">
-            <img src={shopIcon} alt="shop" />
+            <p>shopCart </p>
             <span>{state.itemsCounter}</span>
           </Link>
         </div>

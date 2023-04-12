@@ -49,6 +49,12 @@
   font-size: 0.95rem;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .buttonContainer button {
   font-size: 0.9rem;
   background-color: #1a73e8;
@@ -67,6 +73,12 @@
 .smallButton {
   width: 30px !important;
   font-size: 1.6rem !important;
+  font-weight: bold;
+  line-height: 30px;
+}
+.remButton {
+  width: 80px !important;
+  font-size: 1rem !important;
   font-weight: bold;
   line-height: 30px;
 }

@@ -33,6 +33,12 @@
   position: relative;
 }
 
+a,
+a:focus,
+a:active {
+  color: #1a73e8;
+}
+
 .iconContainer img {
   width: 40px;
   color: #1a73e8;
@@ -41,7 +47,7 @@
 .iconContainer span {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 4.2rem;
   background-color: #0b499b;
   border-radius: 50%;
   width: 18px;

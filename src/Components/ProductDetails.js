@@ -38,46 +38,54 @@ const ProductDetails = (props) => {
         <p className={styles.category}>
           <span>Category : </span>
           {category}
+          <div className={styles.buttonContainer}>
+            <div className={styles.quantityButton}>
+              {quantityCount(state, product.id) > 1 && (
+                <button
+                  className={styles.smallButton}
+                  onClick={() =>
+                    dispatch({ type: "DECREASE", payload: product })
+                  }
+                >
+                  -
+                </button>
+              )}
+              {quantityCount(state, product.id) === 1 && (
+                <button
+                  className={styles.remButton}
+                  onClick={() =>
+                    dispatch({ type: "REMOVE_ITEM", payload: product })
+                  }
+                >
+                  remove
+                </button>
+              )}
+              <span className={styles.counter}>
+                {quantityCount(state, product.id)}
+              </span>
+              {isInCart(state, product.id) ? (
+                <button
+                  className={styles.smallButton}
+                  onClick={() =>
+                    dispatch({ type: "INCREASE", payload: product })
+                  }
+                >
+                  +
+                </button>
+              ) : (
+                <button
+                  onClick={() =>
+                    dispatch({ type: "ADD_ITEM", payload: product })
+                  }
+                >
+                  Add to Cart
+                </button>
+              )}
+            </div>
+          </div>
         </p>
         <div className={styles.buttonContainer}>
           <span className={styles.price}>{price} $</span>
-          <div className={styles.buttonContainer}>
-            {quantityCount(state, product.id) > 1 && (
-              <button
-                className={styles.smallButton}
-                onClick={() => dispatch({ type: "DECREASE", payload: product })}
-              >
-                -
-              </button>
-            )}
-            {quantityCount(state, product.id) === 1 && (
-              <button
-                className={styles.smallButton}
-                onClick={() =>
-                  dispatch({ type: "REMOVE_ITEM", payload: product })
-                }
-              >
-                <img src={trash} alt="iconTrash" style={{ width: "20px" }} />
-              </button>
-            )}
-            <span className={styles.counter}>
-              {quantityCount(state, product.id)}
-            </span>
-            {isInCart(state, product.id) ? (
-              <button
-                className={styles.smallButton}
-                onClick={() => dispatch({ type: "INCREASE", payload: product })}
-              >
-                +
-              </button>
-            ) : (
-              <button
-                onClick={() => dispatch({ type: "ADD_ITEM", payload: product })}
-              >
-                Add to Cart
-              </button>
-            )}
-          </div>
           <Link to="/products">Go to store</Link>
         </div>
       </div>
